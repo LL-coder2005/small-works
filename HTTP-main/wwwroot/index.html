@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈奕迅的音乐空间</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* body{
+            background-color: black;
+        } */
+        
+        .head{
+            width: 100%;
+            height: 110px;
+            background-color: black;
+            position: relative;
+        }
+        .mid{
+            width: 1024px;
+            height: 110px;
+            /* background-color: red; */
+            margin: 0 auto;
+            position: relative;
+        }
+        .logo{
+            width: 200px;
+            height: 22px;
+            position: absolute;
+            /* background-color:blue; */
+            top: 50%;
+            left: 40%;
+        }
+        .nav{
+            width: 250px;
+            height: 22px;
+            /* background-color: green; */
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+        .nav::before{
+            content: "";
+            width: 30px;
+            height: 30px;
+            /* background-color: red; */
+            position: absolute;
+            left: -40px;
+            top: -8px;
+            background-image: url(./photo/QQ20241206-214636.png);
+        }
+        .nav ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        .nav ul li{
+            list-style: none;
+        }
+        .nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+        .lang{
+            width: 200px;
+            height: 30px;
+            /* background-color: purple; */
+            position: absolute;
+            top: 50px;
+            left: 198px;
+            /* background-color: blue; */
+        }
+        .lang li{
+            list-style: none;
+        }
+        .lang li a{
+            color: white;
+            text-decoration: none;
+        }
+        .lang li ul{
+            display: none;
+            background-color: white;
+        }
+        .lang li ul a{
+            color: black;
+            text-decoration: none;
+        }
+        .lang:hover ul{
+            position: absolute;
+            display: block;
+            z-index: 3;
+        }
+        .lang li ul li:hover{
+            background-color: #4c4c4c;
+        }
+        .lang li ul li a:hover{
+            color: white;
+            text-decoration: none;
+        }
+        .photo{
+            width: 1522px;
+            height: 762px;
+            background-color: black;
+            margin: 0 auto;
+            position: relative;
+        }
+        .whole{
+            position: relative;
+            width: 1024px;
+            height: 880px;
+            /* background-color: red; */
+            margin: 0 auto;
+        }
+        .container{
+            width: 1000px;
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: -15px;
+            margin-top: 80px;
+        }
+        .picture{
+            flex-shrink: 1;
+            flex-grow: 1;
+            overflow: hidden;
+            transition: 1s;
+        }
+        .picture:hover{
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+        .zuopin{
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            left: 45%;
+            top: 20px;
+            font-family: "宋体";
+        }
+      .zuopin h1::before{
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            top: 46%;
+            left: -32px;
+            transition: 1s;
+        }
+        .himself{
+            width: 1024px;
+            height: 500px;
+            /* background-color: blue; */
+            position: absolute;
+            top: 394px;
+        }
+        .himself>h1{
+            display: block;
+            width: 200px;
+            position: absolute;
+            left: 45%;
+            top: 20px;
+            font-family: "宋体";
+        }
+        .himself>h1::before{
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            top: 122%;
+            left: -32px;
+            transition: 1s;
+        }
+        .jieshao{
+            width: 1000px;
+            height: 400px;
+            background-color:#4c4c4c;
+            /* background-color: black; */
+            margin: 0 auto;
+            position: absolute;
+            right: 0px;
+            bottom: 15px;
+            border-radius: 30px;
+        }
+        .jieshao img{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            border-radius: 30px;
+       }
+       .text{
+            width: 644px;
+            height: 400px;
+            position: absolute;
+            left: 40px;
+            top: 34px;
+            /* background-color: red; */
+            color: white;
+       }
+       .whole2{
+            position: relative;
+            width: 1024px;
+            height: 4006px;
+            /* background-color: red; */
+            margin: 0 auto;
+      }
+      .honour{
+            width: 1024px;
+            height: 300px;
+            /* background-color: blue; */
+            position: relative;
+            top: 0;
+            margin: 0 auto;
+      }
+      .left1{
+            width: 500px;
+            height: 300px;
+            /* background-color: purple; */
+            float: left;
+            position: relative;
+      }
+      .left1 h1{
+            position: absolute;
+            color: black;
+            /* color: white; */
+            top: 90px;
+            left: 110px;
+      }
+      .left1 span{
+            position: absolute;
+            top: 150px;
+            left: 68px;
+            color: black;
+            /* color: white; */
+      }
+      .right1{
+            float: right;
+            position: relative;
+            width: 500px;
+            height: 300px;
+      }
+      .zuoshang{
+            width: 225px;
+            height: 150px;
+            position: absolute;
+            top: 0;
+            left: 25px;
+            /* background-color: green; */
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+      }
+      .youshang{
+            width: 225px;
+            height: 150px;
+            position: absolute;
+            top: 0;
+            left: 250px;
+            /* background-color: yellow; */
+            border-bottom: 1px solid #ccc;
+            /* border-right                                                              : 1px solid #ccc; */
+     }
+     .zuoxia{
+            width: 225px;
+            height: 150px;
+            position: absolute;
+            top: 150px;
+            left: 25px;
+            /* background-color: purple; */
+            border-right: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+     }
+     .youxia{
+            width: 225px;
+            height: 150px;
+            position: absolute;
+            top: 150px;
+            left: 250px;
+            /* background-color: green; */
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+     }
+     .zuoshang h4{
+            position: absolute;
+            top: 98px;
+            left: 75px;
+     }
+     .zuoshang p{
+            position: absolute;
+            top: 22px;
+            left: 66px;
+            font-size: 48px;
+     }
+     .youshang p{
+            position: absolute;
+            top: 22px;
+            left: 44px;
+            font-size: 48px;
+     }
+     .youshang h4{
+            position: absolute;
+            top: 98px;
+            left: 75px;
+     }
+     .zuoxia p{
+            position: absolute;
+            top: 22px;
+            left: 66px;
+            font-size: 48px;
+     }
+     .zuoxia h4{
+            position: absolute;
+            top: 98px;
+            left: 75px;
+     }
+     .youxia h4{
+            position: absolute;
+            top: 98px;
+            left: 75px;
+     }
+     .youxia p{
+            position: absolute;
+            top: 22px;
+            left: 66px;
+            font-size: 48px;
+     }
+     .gequ{
+        width: 1024px;
+        height: 1500px;
+        /* background: yellow; */
+        position: relative;
+        top: 0;
+     }
+     .gequ>h1{
+        width: 200px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 20px;
+        position: relative;
+        font-family: "宋体"
+     }
+     .gequ>h1::before{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+        top: 122%;
+        left: 2px;
+    }
+    .container2{
+        width: 1024px;
+        height: 1500px;
+        /* background: green; */
+        position: relative;
+        top: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .box{
+        width: 300px;
+        height: 420px;
+        /* background-color: yellow; */
+        position: relative;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .container2 .box:hover{
+        transform: scale(1.05);
+        box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .container2 .box .img-box{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .container2 .box .img-box::before{
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background:linear-gradient(to top,#222 ,transparent) ;
+        z-index: 1;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .container2 .box :hover .img-box::before{
+        opacity: 1;
+    }
+    .container2 .box .img-box img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .container2 .box .text-box{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: flex-end;
+        color: white;
+        z-index: 2;
+    }
+    .container2 .box .text-box h2{
+        font-size: 20px;
+        margin-bottom: 10px;
+        transform: translateY(200px);
+        transition: 0.5s;
+    }
+    .container2 .box:hover .text-box h2{
+        transform: translateY(0);
+        transition-delay: 0.3s;
+    }
+    .container2 .box .text-box p{
+        font-size: 13px;
+        line-height: 20px;
+        transform: translateY(200px);
+        transition: 0.4s;
+
+    }
+    .container2 .box:hover .text-box p{
+        transform: translateY(0);
+        transition-delay: 0.4s;
+    }
+    .news{
+        width: 1024px;
+        height: 1412px;
+        /* background-color: blue; */
+        position: relative;
+        top: 0;
+        margin: 0 auto;
+    }
+    .news>h1{
+        display: block;
+        width: 200px;
+        position: relative;
+        left: 45%;
+        top: 20px;
+        font-family: "宋体";
+
+    }
+    .news>h1::before{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+        top: 122%;
+        left: -32px;
+        transition: 1s;
+   }
+   .news-box{
+        width: 900px;
+        height: 200px;
+        /* background-color: red; */
+        position: relative;
+        top: 35px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+   }
+   .news-pic-box{
+        width: 400px;
+        height:200px;
+        /* background-color: green; */
+   }
+   .news-text-box{
+        width: 500px;
+        height: 200px;
+        /* background-color: pink; */
+        position: absolute;
+        top: 48px;
+        right: -32px;
+   }
+   /* h1,h2,h3,h4,h5,h6,a,p,span{
+        color: white;
+   } */
+   a{
+        text-decoration: none;
+        color: black;
+   }
+   .riqi{
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        border: black 1px solid;
+   }
+   .riqi h3{
+        position: absolute;
+        top: 4px;
+        left: 10px;
+   }
+   .riqi p{
+        position: absolute;
+        top: 24px;
+        left: 12px;
+   }
+   .riqi:hover{
+        background-color: #4c4c4c;
+   }
+   .riqi:hover a{
+        color: white;
+   }
+   .lang{
+        width: 200px;
+        height: 30px;
+        /* background-color: purple; */
+        position: absolute;
+        top: 50px;
+        left: 198px;
+   }
+   .lang li{
+        list-style: none;
+   }
+   .lang li a{
+        color: white;
+   }
+   .lang li ul{
+        display: none;
+        background-color: white;
+   }
+   .lang li ul a{
+        color: black;
+   }
+   .lang:hover ul{
+        position: absolute;
+        display: block;
+        z-index: 3;
+   }
+   .lang li ul li:hover{
+        background-color: #4c4c4c;
+   }
+   .lang li ul li a:hover{
+        color: white;
+   }
+   .jingcaishunjian{
+        width: 1024px;
+        height: 476px;
+        /* background-color: yellow; */
+        position: relative;
+        left: 0;
+   }
+   .jingcaishunjian>h1{
+        display: block;
+        width: 400px;
+        position: absolute;
+        left: 36%;
+        top: 20px;
+        font-family: "宋体";
+   }
+   .jingcaishunjian>h1::before{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+        top: 122%;
+        left: -52px;
+        transition: 1s;
+    }
+    .jingcai-box{
+        width: 1024px;
+        height: 400px;
+        position: relative;
+        top: 76px;
+        left: 0;
+        /* background-color: green; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .jingcai-pic-box{
+        width: 200px;
+        height: 300px;
+        background-color: white;
+        position: relative;
+        margin: 10px;
+        border-radius: 20px;
+    }
+    .jingcai-pic-box img{
+        border-radius: 20px;
+    }
+    .jingcai-pic-box h3{
+        position: absolute;
+        top: -48px;
+        left: 64px;
+    }
+    .jingcai-pic-box p{
+        position: absolute;
+        top: -22px;
+        left: 60px;
+
+    }
+    .join{
+        width: 1024px;
+        height: 300px;
+        /* background-color: purple; */
+        position: relative;
+    }
+    .leftl{
+        width: 500px;
+        height: 300px;
+        /* background-color: red; */
+        position: relative;
+        left: 0;
+        top: 0;
+       
+    }
+    .leftl h1{
+        position: absolute;
+        top: 34%;
+        left:30%;
+    }
+    .leftl p{
+        position: absolute;
+        top: 178px;
+        left: 62px;
+    }
+    .rightr{
+        width: 400px;
+        height: 300px;
+        /* background-color: blue; */
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .lijidingyue{
+        width: 164px;
+        height: 68px;
+        background-color: green;
+        position: absolute;
+        top: 40%;
+        left: -16%;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 68px;
+        background-color: black;
+        color: white;
+    }
+    .liaojiegengduo{
+        width: 164px;
+        height: 68px;
+        position: absolute;
+        top: 40%;
+        left:40%;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 68px;
+        background-color:white;
+        color: black;
+    }
+    .liaojiegengduo:hover{
+        background-color: #4c4c4c;
+        color: white;
+    }
+    .footer{
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        position: relative;
+
+    }
+
+    .shengming{
+        width: 500px;
+        height: 30px;
+        /* background-color: red; */
+        position: absolute;
+        top: 70px;
+        left: 270px;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+    }
+    .biao{
+       width: 400px;
+       height:30px ;
+       position: absolute;
+       top: 70px;
+       right: 200px;
+       /* background-color: yellow; */
+    }
+    .biao span{
+        position: absolute;
+        top: 6;
+        left: 0;
+        color: white;
+    }
+    .biao ul{
+        position: absolute;
+        top: -10px;
+        right: 72px;
+    }
+    .biao ul li{
+        float: left;
+        list-style: none;
+        margin: 10px;
+    }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="head">
+        <div class="mid">
+            <div class="logo">
+                <a href=""><img src="./photo/EASON-CHAN.png" width="200px" alt=""></a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="">资讯&nbsp;|</a></li>
+                    <li><a href="">关于&nbsp;|</a></li>
+                    <li><a href="./yanchang.html" target="_blank" >音乐&nbsp;|</a></li>
+                    <li><a href="./shop.html" target="_blank" >商店&nbsp;|</a></li>
+                    <li><a href="">登录&nbsp;</a></li> 
+                </ul>
+            </div>
+            <div class="lang">
+                <ul>
+                    <li><a href="">简体中文</a>
+                        <ul>
+                            <li><a href="">繁体中文</a></li>
+                            <li><a href="">English</a></li>
+                            <li><a href="">nihongo</a></li>
+                            <li><a href="">한국어</a></li>
+                        </ul>
+                    </li>
+                </ul>
+    
+            </div>
+        </div>
+    </div>
+
+    <div class="photo">
+        <a href=""><img src="./photo/Eason-Concert-Horizontal-01-2-3c.png" width="1522" alt="">
+        </a>
+    </div>
+
+    <div class="whole">
+        <div class="zuopin">
+            <h1>主要作品</h1>
+        </div>
+        <div class="container">
+            <div class="picture">
+                <img src="./photo/11OIP-C.png" alt="">
+            </div>
+            <div class="picture">
+                <img src="./photo/OIP-C (2).png" alt="">
+            </div>
+            <div class="picture">
+                <img src="./photo/OIP-C (3).png" alt="">
+            </div>
+            <div class="picture">
+                <img src="./photo/OIP-C (4).png" alt="">
+            </div>
+            <div class="picture">
+                <img src="./photo/OIP-C1.png" alt="">
+            </div>
+            <div class="picture">
+                <img src="./photo/OIP-C2.png" alt="">
+            </div>
+            <div class="picture">
+                <img src="./photo/OIP-22C.png" alt="">
+            </div>
+        </div>
+        <div class="himself">
+            <h1>个人简介</h1>
+            <div class="jieshao">
+                <img src="./photo/OIP-C.png" height="400" alt="">
+                <div class="text">
+                    <h1>陈奕迅的音乐风格</h1>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以其深情的嗓音和独特的音乐风格深受乐迷喜爱。他的音乐风格多元且富有情感张力，融合多种元素，展现了他独特的艺术魅力</p>
+                    <br>
+                    <h3>多元化的音乐风格</h3>
+                    <p>陈奕迅的音乐风格融合了流行、摇滚、R&B、电子等多种元素，展现出广泛的音乐包容性。创造出既有广泛受众又富有个性的作品</p>
+                    <br>
+                    <h3>情感表达丰富</h3>
+                    <p>陈奕迅的音乐总能触动人心。他的嗓音具备强大的感染力，能够完美驾驭不同风格的歌曲，无论是深情的情歌，还是富有节奏感的快歌，都能展现出不同的情感层次。</p>
+                    <br>
+                    <h3>扣人心弦的歌词</h3>
+                    <p>在歌词的诠释上，他往往能够通过细腻的情感表达，使每一首歌曲都拥有深刻的内涵和强烈的代入感。</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="whole2">
+        <div class="honour">
+           <div class="left1">
+                <h1>陈奕迅的成就</h1>
+                <span>用数字见证Eason在音乐领域的辉煌成就</span>
+           </div>
+           <div class="right1">
+                <div class="zuoshang">
+                    <p>50+</p>
+                    <h4>音乐奖项</h4>
+                </div>
+                <div class="youshang">
+                    <p>100M+</p>
+                    <h4>专辑销量</h4>
+                </div>
+                <div class="zuoxia">
+                    <p>30+</p>
+                    <h4>全球巡演</h4>
+                </div>
+                <div class="youxia">
+                    <p>20+</p>
+                    <h4>音乐专辑</h4>
+                </div>
+           </div>
+
+        </div>
+
+        <div class="gequ">
+            <h1>热门作品</h1>
+            <div class="container2">
+                <div class="box">
+                    <div class="img-box">
+                        <img src="./photo/gequfengmian/IMG_2950.png"  width="300" alt="">
+                    </div>
+                    <div class="text-box">
+                        <div>
+                            <h2>黑暗中漫舞</h2>
+                            <p>这首歌以跳舞为隐喻，表达了爱情当中的自卑感和无力感，也表达了对已经失去感情的怀念和遗憾。之所以要在黑暗中漫舞，也许是因为自卑，我不擅长跳舞，舞姿与你不相称，只敢在黑暗中学习摸索，但只要你不嫌弃我笨拙，我便可以陪你跳到天昏地暗。</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+                        <img src="./photo/gequfengmian/IMG_2955.png"   width="300" alt="">
+                    </div>
+                    <div class="text-box">
+                        <div>
+                            <h2>孤独患者</h2>
+                            <p>外向的孤独患者是那种内心深处感到孤独的人，这类人往往表面上是正常，甚至可能开朗外向，但这种孤独感是来自内心深处的，即使身处人群之中，也会觉得空虚孤独。</p>
+                            <p>我不唱声嘶力竭的情歌，不表示没有心碎的时刻~</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+                        <img src="./photo/gequfengmian/IMG_2956.png"  width="300" alt="">
+                    </div>
+                    <div class="text-box">
+                        <div>
+                            <h2>爱情转移</h2>
+                            <p>人们追求真爱的过程总会经历各种挫折，但是爱是一种责任，甜言蜜语和新鲜感不是真正的爱情。寻找真爱的路是困难的，真诚和勇敢永远都是最重要的</p>
+                            <p>爱情不是温馨的请客吃饭~</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+                        <img src="./photo/gequfengmian/IMG_2957.png" width="300" alt="">
+                    </div>
+                    <div class="text-box">
+                        <div>
+                            <h2>明年今日</h2>
+                            <p>十年表达的是对过去的遗憾和感慨，而明年今日表达的是失恋过后的感受。人们常常难以走出，这首歌既表达了刚失恋时的痛苦与无奈，又表达了对未来的寄托</p>
+                            <p>在有生的瞬间能遇到你，竟花光所有运气~</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+                        <img src="./photo/gequfengmian/IMG_2959.png"  width="300" alt="">
+                    </div>
+                    <div class="text-box">
+                        <div>
+                            <h2>最佳损友</h2>
+                            <p>想过每个人都曾经有过那么一位最佳损友，你们曾经亲密无间，无话不说。可是却因为一些变故或者是人生轨迹的变化导致你们的关系不再像以前那样要好，甚至决裂。在你真正难过的时候他们也会给予你帮助和安慰，你们的回忆也是任何人都比不了的</p>
+                            <p>为何旧知己在最后变不到老友~</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+                        <img src="./photo/gequfengmian/IMG_2960.png"  width="300" alt="">
+                    </div>
+                    <div class="text-box">
+                        <div>
+                            <h2>十面埋伏</h2>
+                            <p>主人公时常在下午来这里寄信件，逢礼拜留连艺术展，但却总是和心仪的人擦肩而过。《十面埋伏》这首歌曲通过歌词中的遗憾和错过，表达了人们在感情路上的艰辛和不易，让人深深地感受到了爱情的珍贵和脆弱。</p>
+                            <p>现在惩罚我分手分错了么~</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+                        <img src="./photo/gequfengmian/IMG_2961.png" width="300" alt="">
+                    </div>
+                    <div class="text-box">
+                        <div>
+                            <h2>沙龙</h2>
+                            <p>歌词中主要讲述了珍惜当下，留住美好的人生瞬间的主题。歌曲以轻快的旋律和流畅的歌词展现出人生的美好与瞬息即逝的瞬间。表达了珍惜当下，留住美好瞬间的主题，让人们更加珍惜生命，享受人生</p>
+                            <p>
+                                其实人生并非虚耗，何来尘埃飞舞~
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+                        <img src="./photo/gequfengmian/IMG_2962.png" width="300" alt="">
+                    </div>
+                    <div class="text-box">
+                        <div>
+                            <h2>陀飞轮</h2>
+                            <p>表达了人生的匆忙和无常，以及对时间的珍惜和对生命的思考。时间不等人，当我们回头看的时候，曾经拥有的一切都离我们远去。生命是有限的，我们需要珍惜每一刻，不要为了虚荣而忽略了真正重要的东西</p>
+                            <p>
+                                人值得命中减少几秒，多买一只表~
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="box">
+                    <div class="img-box">
+                        <img src="./photo/gequfengmian/IMG_2963.png"  width="300" alt="">
+                    </div>
+                    <div class="text-box">
+                        <div>
+                            <h2>任我行</h2>
+                            <p>这首歌词，讲述了一个自由自在、不受拘束的人物形象，通过对儿时的回忆和对生命的思考，表达了对自由的向往和对人生的感悟。人生的路上，我们可能会迷失方向，但是只要我们不放弃，继续前行，总会找到一条适合自己的路。</p>
+                            <p>
+                                人群是那么像羊群~
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+
+        <div class="news">
+            <h1>最新资讯</h1>
+            <div class="news-box">
+                <div class="riqi">
+                    <a href=""><h3>21</h3></a>
+                    <a href=""><p>9月</p></a>
+                </div>
+                <div class="news-pic-box">
+                    <a href=""><img src="./photo/002-768x543.png" width="400"  height="200"  alt=""></a>
+                </div>
+                <div class="news-text-box">
+                    <a href=""><h3>陈奕迅FEAR AND DREAMS 演唱会  有关演唱会主题T恤预购订单之安排  (最新: 2022年9月21日)</h3>
+                    </a>
+                    <a href=""><p>陈奕迅FEAR AND DREAMS 演唱会 有关演唱会主题T恤预购订单之安排 最新: 2022年9月21日 [...] [...]</p>
+                    </a>
+                </div>
+            </div>
+            <div class="news-box">
+                <div class="riqi">
+                    <a href=""><h3>11</h3>
+                    </a>
+                    <a href=""><p>2月</p>
+                    </a>
+                </div>
+                <div class="news-pic-box">
+                    <a href=""><img src="./photo/Eason-Concert-Horizontal-01-2-3c.png" width="400" height="200" alt=""></a>
+                </div>
+                <div class="news-text-box">
+                    <a href=""><h3>《FWD富卫保险呈献：陈奕迅FEAR AND DREAMS 香港演唱会》</h3>
+                    </a>
+                    <a href=""><p>陈奕迅 Fear and Dreams演唱会 有关演唱会主题T恤预购订单延期发货及退款安排 （最新：2020年 [...] [...]</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-box">
+                <div class="riqi">
+                    <a href=""><h3>11</h3>
+                    </a>
+                    <a href=""><p>2月</p>
+                    </a>
+                </div>
+                <div class="news-pic-box">
+                    <a href=""><img src="./photo/002-768x543.png" width="400" height="200" alt=""></a>
+                </div>
+                <div class="news-text-box">
+                    <a href=""><h3>关于 “陈奕迅 Fear and Dreams 世界巡回演唱会 – 上海站” 延期举行公告</h3>
+                    </a>
+                    <a href=""><p> [...]</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-box">
+                <div class="riqi">
+                    <a href=""><h3>11</h3>
+                    </a>
+                    <a href=""><p>2月</p>
+                    </a>
+                </div>
+                <div class="news-pic-box">
+                    <a href=""><img src="./photo/22.png" width="400" height="200" alt=""></a>
+                </div>
+                <div class="news-text-box">
+                    <a href=""></a><h3>陈奕迅Fear and Dreams世界巡回演唱会 于上海正式启航 1月13日开始预售</h3>
+                </a>
+                    <a href=""><p>陈奕迅Fear and Dreams世界巡回演唱会 于上海正式启航 1月13日开始预售 千呼万唤，陈奕迅Fea [...] [...]</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-box">
+                <div class="riqi">
+                    <a href=""><h3>07</h3>
+                    </a>
+                    <a href=""><p>1月</p>
+                    </a>
+                </div>
+                <div class="news-pic-box">
+                    <a href=""><img src="./photo/33.png" width="400" height="200" alt=""></a>
+                </div>
+                <div class="news-text-box">
+                    <a href=""><h3>有关演唱会主题T恤预购订单延期发货及退款安排</h3>
+                    </a>
+                    <a href=""><p>FWD富卫保险 陈奕迅 Fear and Dreams 香港演唱会 19/20 有关演唱会主题T恤预购订单延期 [...] [...]</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-box">
+                <div class="riqi">
+                    <a href=""><h3>18</h3>
+                    </a>
+                    <a href=""><p>12月</p>
+                    </a>
+                </div>
+                <div class="news-pic-box">
+                    <a href=""><img src="./photo/44.png" width="400" height="200" alt=""></a>
+                </div>
+                <div class="news-text-box">
+                    <a href=""><h3>FWD富卫保险 陈奕迅 Fear and Dreams 香港演唱会 19/20  演出取消公告</h3>
+                    </a>
+                    <a href=""><p>FWD富卫保险 陈奕迅 Fear and Dreams 香港演唱会 19/20 演出取消公告 《FWD富卫保险 [...] [...]</p>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="jingcaishunjian">
+            <h1>音乐生涯的精彩瞬间</h1>
+            <div class="jingcai-box">
+                <div class="jingcai-pic-box">
+                    <h3>第一张专辑</h3>
+                    <p>《一滴眼泪》</p>
+                    <a href=""><img src="./photo/th.png" height="300" width="230" alt="">
+                    </a>
+
+                </div>
+                <div class="jingcai-pic-box">
+                    <h3>获奖瞬间</h3>
+                    <a href=""><img src="./photo/w640slw.png" height="300" width="230" alt="">
+                    </a>
+                </div>
+                <div class="jingcai-pic-box">
+                    <h3>大型演唱会</h3>
+                    <a href=""><img src="./photo/666.png" height="300" width="230" alt=""></a>
+                </div>
+                <div class="jingcai-pic-box">
+                    <h3>最新专辑</h3>
+                    <p>《CHIN UP!》</p>
+                    <a href=""><img src="./photo/77.png" width="230" height="300" alt=""></a>
+                </div>
+
+            </div>
+        
+        </div>
+
+        <div class="join">
+            <div class="leftl">
+                <h1>加入我们</h1>
+                <p>订阅并获取陈奕迅的最新资讯与演唱会信息</p>
+            </div>
+            <div class="rightr">
+                <div class="lijidingyue">
+                    <!-- <p>立即订阅</p> -->
+                     立即订阅
+                </div>
+                <div class="liaojiegengduo">
+                    了解更多
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        <div class="shengming">
+            2024 ESL Limited. All rights reserved.&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;TERMS & CONDITIONS
+        </div>
+        <div class="biao">
+            <span>Follow us on:</span>
+            <ul>
+                <li><a href=""><img src="./photo/FB-f-Logo_-white_100.png" width="30" height="30" alt=""></a></li>
+                <li><a href=""><img src="./photo/wechat-white-1.png" width="30" height="30" alt=""></a></li>
+                <li><a href=""><img src="./photo/weibo-white-website-logo-1.png" width="30" height="30" alt=""></a></li>
+                <li><a href=""><img src="./photo/youtube-white-150x150-1.png" width="30" height="30" alt=""></a></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
