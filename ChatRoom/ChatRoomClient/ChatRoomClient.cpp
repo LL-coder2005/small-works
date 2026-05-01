@@ -21,6 +21,7 @@ ChatRoomClient::ChatRoomClient(std::string cname,int port,std::string ip):name(c
 
 void ChatRoomClient::run(){
     std::thread recvThread(&ChatRoomClient::recvMsg,this);
+    recvThread.detach();
     while(is_running){
         std::string text;
         getline(std::cin,text);
@@ -52,8 +53,12 @@ void ChatRoomClient::recvMsg(){
         std::string data;
         data.resize(sizeof(Msg));
         int res = recv(cfd,data.data(),data.size(),0);
+        if(res<=0){
+            is_running = false;
+            break;
+        }
         Msg serMsg;
-        serMsg.deserialize_message(std::string(data,res));
+        serMsg.deserialize_message(data);
         std::cout << "["<<serMsg.clientName<<"]:"<<serMsg.text<<std::endl;
     }
 }
