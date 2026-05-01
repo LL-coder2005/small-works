@@ -66,6 +66,7 @@ void ChatRoomSer::handleClient(int cfd,sockaddr_in cin){
                     clients.erase(it);
                     break;
                 }
+                ++it;
             }
             return;
         }
@@ -103,6 +104,7 @@ void ChatRoomSer::handleClient(int cfd,sockaddr_in cin){
                         clients.erase(it);
                         break;
                     }
+                    ++it;
                 }
             }
             sprintf(clientMsg.text,"----%s退出聊天室----",clientMsg.clientName);
