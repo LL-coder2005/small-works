@@ -1,0 +1,3 @@
+/home/lhz/small-works/ChatRoom/ChatRoomClient/build/CMakeFiles/ChatRoomClient.dir
+/home/lhz/small-works/ChatRoom/ChatRoomClient/build/CMakeFiles/edit_cache.dir
+/home/lhz/small-works/ChatRoom/ChatRoomClient/build/CMakeFiles/rebuild_cache.dir

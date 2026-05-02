@@ -1,0 +1,1 @@
+/opt/rh/gcc-toolset-13/root/usr/bin/c++ CMakeFiles/ChatRoomClient.dir/src/ChatRoomClient.cpp.o CMakeFiles/ChatRoomClient.dir/src/main.cpp.o -o ChatRoomClient  -lpthread 
